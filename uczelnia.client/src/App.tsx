@@ -1,30 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-
-const SubjectItem = ({ subject, onDelete, onEdit, onUpdate }) => {
-    const handleCheckboxChange = () => {
-        const updatedSubject = { ...subject, inStock: !subject.inStock };
-        onUpdate(updatedSubject);
-    };
-
-    const itemStyle = {
-        color: subject.inStock ? 'white' : 'gray', // Czarny kolor tekstu dla inStock true, szary dla false
-    };
-
-    return (
-        <li style={itemStyle}>
-            {subject.id}. {subject.name}
-            <input
-                type="checkbox"
-                checked={subject.inStock}
-                onChange={handleCheckboxChange} />
-            In Stock
-            <button className="delete-btn" onClick={() => onDelete(subject.id)}>Delete</button>
-            <button className="edit-btn" onClick={() => onEdit(subject)}>Edit</button>
-        </li>
-    );
-};
+import { SubjectItem } from './SubjectItem';
+import { SubjectForm } from './SubjectForm';
 
 const SubjectList = ({ subjects, onDelete, onEdit }) => {
     return (
@@ -33,29 +11,6 @@ const SubjectList = ({ subjects, onDelete, onEdit }) => {
                 <SubjectItem key={subject.id} subject={subject} onDelete={onDelete} onEdit={onEdit} />
             ))}
         </ul>
-    );
-};
-
-const SubjectForm = ({ subject, setSubject, saveSubject, cancelEdit }) => {
-    return (
-        <div>
-            <input
-                type="text"
-                placeholder="New product"
-                value={subject.name}
-                onChange={(e) => setSubject({ ...subject, name: e.target.value })}
-            />
-            <label>
-                <input
-                    type="checkbox"
-                    checked={subject.inStock}
-                    onChange={(e) => setSubject({ ...subject, inStock: e.target.checked })}
-                />
-                In stock
-            </label>
-            <button onClick={saveSubject}>Save</button>
-            {cancelEdit && <button onClick={cancelEdit}>Cancel</button>}
-        </div>
     );
 };
 
