@@ -1,89 +1,61 @@
-# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+# Uczelnia_v1
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+## Opis
 
+Projekt "Uczelnia_v1" to aplikacja do zarządzania procesami akademickimi. Zapewnia podstawowe funkcjonalności umożliwiające zarządzanie danymi studentów, wykładowców, przedmiotów i ocen. Projekt może być wykorzystany w celach edukacyjnych lub jako baza do rozbudowy bardziej zaawansowanego systemu.
 
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## Funkcjonalności
 
+- Dodawanie i zarządzanie danymi studentów, wykładowców oraz przedmiotów.
+- Rejestrowanie ocen studentów.
+- Wyświetlanie listy przedmiotów oraz wyników egzaminów.
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+## Wymagania
 
+- Java 11+
+- Maven (do zarządzania zależnościami)
+- Relacyjna baza danych (np. MySQL, PostgreSQL, H2)
+- Opcjonalnie środowisko IDE (np. IntelliJ IDEA, Eclipse)
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+## Instalacja
 
+1. Sklonuj repozytorium:
+   ```bash
+   git clone https://github.com/Konume/Uczelnia_v1.git
+   cd Uczelnia_v1
+   ```
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+2. Skonfiguruj bazę danych:
+   - Utwórz bazę danych o nazwie `uczelnia_v1`.
+   - Wprowadź odpowiednie dane dostępowe w pliku `application.properties`.
 
+3. Zbuduj projekt za pomocą Mavena:
+   ```bash
+   mvn clean install
+   ```
 
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+4. Uruchom aplikację:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+## Użycie
 
+1. Otwórz aplikację w przeglądarce pod adresem [http://localhost:8080](http://localhost:8080).
+2. Użyj interfejsu użytkownika do dodawania i przeglądania danych studentów, wykładowców i przedmiotów.
 
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+## Dokumentacja
 
-`write-your-code-here`
+Szczegółowe informacje o projekcie znajdują się w katalogu `docs` w repozytorium. Zawiera on m.in. diagramy UML i przykłady użycia.
 
+## Wkład
 
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Zapraszamy do zgłaszania błędów, sugestii oraz propozycji ulepszeń za pomocą systemu zgłoszeń (Issues). Pull requesty są mile widziane!
 
+## Licencja
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+Projekt "Uczelnia_v1" jest licencjonowany na warunkach licencji MIT. Szczegóły znajdują się w pliku [LICENSE](LICENSE).
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+---
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Dziękujemy za zainteresowanie projektem i zapraszamy do jego rozwijania!
